@@ -1,15 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-@keyframes animacion-titulo{
-    0%  {left: 0px;  top: 0px;}
-    100% {left:0px ; ; top:-350px ;}
-}
-.animacion-titulo{
-    position:relative;
-    animation-duration: 4s;
-    animation-name: animacion-titulo;
-    animation-fill-mode: forwards;
-}
+
 body{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
@@ -18,13 +9,13 @@ body{
 	color: #ececee;
 	background-color: #1f2029;
 	overflow: hidden;
-  background-image: url(/img/photo-1483728642387-6c3bdd6c93e5.avif);
+  background-image: url(/img/amd-radeon-abstract-3840x2160-10671.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size:cover;
   height: 100vh;
   width: 100%;
-  backdrop-filter:blur(2px);
+  backdrop-filter:blur(5px);
 }
 .section-center{
   position: absolute;
@@ -37,16 +28,20 @@ body{
   z-index: 6;
   text-align: center;
   transform: translateY(-50%);
+  color: #ececee;
 }
 h1{
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 7vw;
   line-height: 1;
-  color: #ffeba7;
+  color: #f7f7f7;
+  /* ffeba7 */
   text-align: center;
-  -webkit-text-stroke: 2px #ffeba7;
-  text-stroke: 2px #ffeba7;
+  -webkit-text-stroke: 2px #ffffff;
+  /* ffeba1 */
+  text-stroke: 2px #f1f1f1;
+    /* ffeba1 */
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
@@ -140,7 +135,7 @@ h1{
   z-index: 9;
   overflow: hidden;
   box-shadow: 0 8px 30px 0 rgb(255, 255, 255);
-  background-color: #4c7981;
+  background-color: #ec6047;
   /* #353746 */
   animation: border-transform 7s linear infinite;
   transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),  
@@ -181,7 +176,7 @@ h1{
   width: 100%;
   padding: 0;
   margin: 0;
-  z-index: 6;
+  z-index: 7;
   text-align: center;
   transform: translateY(-50%);
   list-style: none;
@@ -211,6 +206,9 @@ h1{
 }
 .nav ul li:nth-child(4){
   transition-delay: 50ms;
+}
+.nav ul li:nth-child(5){
+  transition-delay: 25ms;
 }
 .nav ul li a{
   font-family: 'Montserrat', sans-serif;
@@ -268,6 +266,9 @@ h1{
 .menu-icon:checked ~ .nav ul li:nth-child(4){
   transition-delay: 1640ms;
 }
+.menu-icon:checked ~ .nav ul li:nth-child(5){
+  transition-delay: 1700ms;
+}
 .logo {
 	position:absolute;
 	top: 60px;
@@ -283,7 +284,24 @@ h1{
 	
 	display: block;
 }
-
+@keyframes animacion-titulo{
+  0%  {left: 0px;  top: 0px;}
+  100% {left:0px ; ; top:-300px ;}
+}
+.animacion-titulo{
+  position:relative;
+  animation-duration: 4s;
+  animation-name: animacion-titulo;
+  animation-fill-mode: forwards;
+}
+.informacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 50px;
+  border: 1px solid black;
+}
 
 
 @media screen and (max-width: 991px) {

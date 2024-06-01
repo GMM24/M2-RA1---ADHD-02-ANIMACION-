@@ -7,14 +7,15 @@ body {
   line-height: 1.7;
   color: #ececee;
   background-color: #1f2029;
-  overflow: hidden;
+  overflow:  scroll;
   background-image: url(/img/amd-radeon-abstract-3840x2160-10671.jpg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
+  backface-visibility: 50%;
   background-size: cover;
   height: 100vh;
   width: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter:initial;
 }
 
 .section-center {
@@ -356,18 +357,21 @@ h1 {
 
 .animaciones {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 130vh;
+  height: 170vh;
 }
 
 .imagen {
-  margin: 10px;
+  margin: 20px;
+  padding:5px;
+
 }
 
 .img {
   width: 70px;
+  display: flex;
+  
 
 }
 

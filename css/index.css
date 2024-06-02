@@ -7,7 +7,7 @@ body {
   line-height: 1.7;
   color: #ececee;
   background-color: #1f2029;
-  overflow:  scroll;
+  overflow: hidden;
   background-image: url(/img/amd-radeon-abstract-3840x2160-10671.jpg);
   background-position: center;
   background-attachment: fixed;
@@ -15,7 +15,7 @@ body {
   background-size: cover;
   height: 100vh;
   width: 100%;
-  backdrop-filter:initial;
+  backdrop-filter: blur(5px);
 }
 
 .section-center {
@@ -334,19 +334,189 @@ h1 {
   display: block;
 }
 
-@keyframes animacion-titulo {
-  0% {
-    left: 0px;
-    top: 0px;
+
+.animacion1 {
+  animation-duration: 5s;
+  animation-name: animacion1;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animacion1 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotateY(0deg);
   }
 
-  100% {
-    left: 0px;
-    ;
-    top: -200px;
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotateY(180deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotateY(360deg);
   }
 }
 
+.animacion2 {
+  animation-name: animacion2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animacion2 {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-out;
+  }
+}
+.animacion3 {
+  text-align: center;
+  animation: animacion3 1s infinite;
+}
+
+@keyframes animacion3 {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animacion4{
+  animation: animacion4 4s infinite;
+  position: relative;
+  animation-timing-function: ease-in-out;
+  
+}
+@keyframes animacion4 {
+  0%   {left:0px; top:0px;}
+  25%  {left:10px; top:0px;}
+  50%  {left:10px; top:10px;}
+  75%  {left:0px; top:10px;}
+  100% {left:0px; top:0px;}
+}
+.animacion5 {
+  animation: animacion5 4s infinite linear;
+}
+
+@keyframes animacion5 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animacion6{
+  animation: animacion6 4s infinite;
+  position: relative;
+  animation-timing-function: ease-out;
+ 
+}
+@keyframes animacion6 {
+  0%   {left:0px; top:0px;}
+  25%  {left:10px; top:0px;}
+  50%  {left:5px; top:5px;}
+  75%  {left:0px; top:5px;}
+  100% {left:0px; top:0px;}
+}
+.animacion7{
+  animation: animacion7 3s infinite ;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes animacion7 {
+  0%, 100% {
+  
+    transform: translateY(0px);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(-20px);
+    transform: rotate(180deg);
+   
+  }
+}
+.animacion8 {
+  
+  position: relative;
+  animation-name: animacion8;
+  animation-duration: 3s;  
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animacion8 {
+  from {top: -10px;}
+  to {top:10px;}
+}
+.animacion9{
+  position: relative;
+  animation: animacion9 linear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes animacion9 {
+  0%   {left:20px; top:0px;}
+  25%  {left:0px; top:0px;}
+  50%  {left:0px; top:0px;}
+  75%  {left:0px; top:0px;}
+  100% {left:20px; top:0px;}
+  
+}
+.animacion10 {
+    background-color: red;
+    position: relative;
+    animation-name: animacion10;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes animacion10 {
+    0%   {background-color:red; left:5px; top:0px;}
+    25%  {background-color:rgb(255, 0, 157); left:5px; top:0px;}
+    50%  {background-color:blue; left:5px; top:0px;}
+    75%  {background-color:green; left:px; top:0px;}
+    100% {background-color:rgb(255, 166, 0); left:5px; top:0px;}
+  }
+button{
+  width: 100px;
+  height: 60px;
+  margin: 3px;
+  justify-content: center;
+  align-items: center;
+}
+  
+
+@keyframes animacion-titulo {
+  0%{
+    left: 0px;
+    top: 0px;
+  }
+  100%{
+    left:0px;
+    top: -200px;
+  }
+  
+}
 .animacion-titulo {
   overflow: hidden;
   position: relative;
@@ -357,21 +527,22 @@ h1 {
 
 .animaciones {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  height: 170vh;
+  justify-content: center;
+  height: 100vh;
 }
 
 .imagen {
   margin: 20px;
-  padding:5px;
+  padding: 5px;
 
 }
 
 .img {
   width: 70px;
   display: flex;
-  
+
 
 }
 
@@ -411,7 +582,7 @@ h1 {
   }
 
   .animaciones {
-    
+
     right: 5px;
     left: 5px;
   }
